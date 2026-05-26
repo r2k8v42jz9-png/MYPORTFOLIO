@@ -1,6 +1,16 @@
 "use client";
 
-import { useLayoutEffect, useRef, useState, type ReactNode } from "react";
+import {
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
+
+// useLayoutEffect on the client, useEffect on the server (avoids SSR warning).
+const useIsoLayoutEffect =
+  typeof window !== "undefined" ? useLayoutEffect : useEffect;
 import {
   Scale,
   Phone,
@@ -103,7 +113,7 @@ function ScaledScreenshot({
   const [scale, setScale] = useState(0.5);
   const [innerH, setInnerH] = useState(0);
 
-  useLayoutEffect(() => {
+  useIsoLayoutEffect(() => {
     const measure = () => {
       const w = outerRef.current?.clientWidth ?? DESIGN_W;
       setScale(w / DESIGN_W);
