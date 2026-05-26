@@ -1,0 +1,368 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "about": "Men haqimda",
+    "projects": "Loyihalar",
+    "services": "Xizmatlar",
+    "aiAgents": "AI Agentlar",
+    "telegramBots": "Telegram Botlar",
+    "pricing": "Narxlar",
+    "contact": "Aloqa",
+    "menu": "Menyu"
+  },
+  "hero": {
+    "greeting": "Salom, men",
+    "name": "Aziz Saburov",
+    "title": "Full-Stack Dasturchi & AI Mutaxassisi",
+    "headline": "Zamonaviy saytlar, Telegram botlar va AI yechimlar yarataman",
+    "description": "1 yildan beri dasturlashni o'rganaman. Premium saytlar, Telegram botlar va biznes uchun AI yechimlar yaratishga ixtisoslashganman.",
+    "cta_projects": "Loyihalarni ko'rish",
+    "cta_contact": "Bog'lanish",
+    "cta_order": "Sayt buyurtma qilish",
+    "scroll": "Pastga aylantirish"
+  },
+  "stats": {
+    "projects": "Loyiha",
+    "clients": "Mijoz",
+    "experience": "Yil tajriba",
+    "satisfaction": "Qoniqish"
+  },
+  "why": {
+    "subtitle": "Afzalliklar",
+    "title": "Nega mijozlar meni tanlaydi",
+    "description": "Har bir loyiha tezlik, sifat va tafsilotlarga e'tiborni birlashtiradi",
+    "items": {
+      "fast": {
+        "title": "Tez ishlab chiqish",
+        "desc": "Loyihalarni sifatni yo'qotmasdan o'z vaqtida topshiraman. Aniq muddatlar va shaffof jarayon."
+      },
+      "uiux": {
+        "title": "Premium UI/UX",
+        "desc": "Qimmat ko'rinadigan va barcha qurilmalarda mukammal ishlaydigan interfeyslar yarataman."
+      },
+      "seo": {
+        "title": "SEO optimizatsiya",
+        "desc": "Tez yuklanadigan va qidiruv natijalarida yuqori o'rinlarni egallaydigan saytlar."
+      },
+      "ai": {
+        "title": "AI integratsiya",
+        "desc": "Biznesni avtomatlashtiradigan va vaqtni tejaydigan zamonaviy AI yechimlarni joriy qilaman."
+      }
+    }
+  },
+  "about": {
+    "title": "Men haqimda",
+    "subtitle": "Yosh, ambitsiyali dasturchi",
+    "story_title": "Mening hikoyam",
+    "story": "Men 18 yoshdaman va 1 yildan beri dasturlash bilan shug'ullanaman. Bu vaqt ichida birinchi kod satrlaridan to to'liq tijorat loyihalarini yaratishgacha o'tdim. Zamonaviy veb-saytlar, Telegram botlar va AI yechimlar yaratishga ixtisoslashganman.",
+    "story2": "Mening maqsadim faqat saytlar emas, balki biznesingiz o'sishiga va mijozlar jalb qilishga yordam beradigan kuchli raqamli vositalar yaratish. Har bir loyiha men uchun haqiqatan ham ajoyib narsa yaratish imkoniyatidir.",
+    "skills_title": "Ko'nikmalar",
+    "tech_title": "Texnologiyalar",
+    "timeline_title": "Rivojlanish yo'li",
+    "age": "18 yosh",
+    "location": "Toshkent, O'zbekiston",
+    "experience_label": "Tajriba",
+    "experience_value": "1 yil",
+    "timeline": [
+      {
+        "year": "2024",
+        "title": "Boshlanish",
+        "desc": "Dasturlashni o'rganishni boshladim. HTML, CSS, JavaScript o'zlashtirdim."
+      },
+      {
+        "year": "2024",
+        "title": "React & Next.js",
+        "desc": "Frontend dasturlashga chuqur sho'ng'idim, React va Next.js o'rgandim."
+      },
+      {
+        "year": "2025",
+        "title": "Birinchi loyihalar",
+        "desc": "Legal Masters jumladan birinchi tijorat loyihalarini ishga tushirdim."
+      },
+      {
+        "year": "2025",
+        "title": "AI & Telegram Botlar",
+        "desc": "Telegram bot ishlab chiqish va AI integratsiyalarini o'zlashtirdim."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Loyihalar",
+    "subtitle": "Tanlangan ishlar",
+    "description": "Mehr va professionallik bilan yaratgan loyihalar",
+    "view_all": "Barcha loyihalar",
+    "view_project": "Loyihani ko'rish",
+    "visit_site": "Saytni ochish",
+    "technologies": "Texnologiyalar",
+    "features": "Imkoniyatlar",
+    "coming_soon": "Tez kunda",
+    "back": "Loyihalarga qaytish",
+    "live_label": "Sayt ishlamoqda",
+    "year_label": "Yil",
+    "role_label": "Rol",
+    "role_value": "Dizayn va ishlab chiqish",
+    "duration_label": "Muddat",
+    "section_overview": "Umumiy ma'lumot",
+    "section_challenge": "Vazifa",
+    "section_solution": "Yechim",
+    "section_results": "Natijalar",
+    "section_responsive": "Moslashuvchan dizayn",
+    "section_multilingual": "Ko'p tillilik tizimi",
+    "placeholder_title": "Keyingi loyiha",
+    "placeholder_desc": "Bu yerda sizning loyihangiz bo'lishi mumkin. Hamkorlik uchun bog'laning.",
+    "legalmasters": {
+      "title": "Capital Legal Masters",
+      "category": "Korporativ sayt",
+      "year": "2025",
+      "duration": "3 hafta",
+      "description": "Zamonaviy huquq firmasi uchun premium ko'p tilli korporativ sayt. Elegant dizayn, to'liq ko'p tillilik (RU/EN/UZ), zamonaviy animatsiyalar.",
+      "full_description": "Capital Legal Masters — huquq firmasi uchun premium korporativ sayt. Loyiha ishonch, professionallik va zamonaviy dizaynga urg'u berib ishlab chiqilgan. Rus, ingliz va o'zbek tillarida to'liq ko'p tillilik. SEO va ishlash uchun optimallashtirilgan.",
+      "overview": "Capital Legal Masters menga yetakchi huquq firmasi sifatidagi obro'sini aks ettiruvchi premium raqamli mavjudlik yaratish uchun murojaat qildi. Maqsad — birinchi soniyadanoq ishonch uyg'otadigan va tashrif buyuruvchilarni konsultatsiya mijozlariga aylantiradigan korporativ sayt.",
+      "challenge": "Firmada zamonaviy veb-sayt yo'q edi, raqobatchilar esa eskirgan ko'rinardi. Uch tilda ishlaydigan, darhol ishonch uyg'otadigan va raqobatbardosh bozorda yuqori o'rinni egallash uchun tez yuklanadigan yechim kerak edi.",
+      "challenge_points": [
+        "Zamonaviy veb-mavjudlikning yo'qligi",
+        "Mijozlarga 3 tilda xizmat ko'rsatish zarurati",
+        "Yuqori raqobatli huquqiy xizmatlar sohasi",
+        "Tezlik va SEO bo'yicha qat'iy talablar"
+      ],
+      "solution": "Men obro' va ishonchni ifodalovchi elegant to'q va oltin rangli identifikatsiya ishlab chiqdim. Sayt tezlik va SEO uchun server renderingi, to'liq ko'p tillilik tizimi va silliq Framer Motion animatsiyalari bilan Next.js da qurilgan.",
+      "solution_points": [
+        "Premium to'q va oltin vizual identifikatsiya",
+        "Maksimal unumdorlik uchun SSR bilan Next.js",
+        "Uch tildagi to'liq i18n tizimi",
+        "Silliq animatsiyalar va mikro-interaksiyalar"
+      ],
+      "results": [
+        { "value": "95+", "label": "Lighthouse bahosi" },
+        { "value": "3", "label": "Interfeys tili" },
+        { "value": "<1s", "label": "Yuklanish vaqti" },
+        { "value": "100%", "label": "Moslashuvchanlik" }
+      ],
+      "responsive_text": "Har bir bo'lim mobil, planshet va desktopga mukammal moslashadi. Kontent silliq qayta tuziladi va istalgan o'lchamdagi ekranda premium ko'rinishni saqlaydi.",
+      "multilingual_text": "next-intl asosida qurilgan: tashrif buyuruvchilar rus, o'zbek va ingliz tillari o'rtasida bemalol almashadi. Til tanlovi saqlanadi, metama'lumotlar esa har bir mintaqa uchun SEO maqsadida mahalliylashtirilgan.",
+      "languages": ["Русский", "O'zbek", "English"],
+      "features": [
+        "Ko'p tillilik tizimi (RU/EN/UZ)",
+        "Premium dizayn",
+        "Framer Motion animatsiyalari",
+        "SEO optimizatsiya",
+        "Moslashuvchan dizayn",
+        "Murojaat formasi"
+      ]
+    }
+  },
+  "services": {
+    "title": "Xizmatlar",
+    "subtitle": "Nima yarataman",
+    "description": "Biznesingiz uchun to'liq zamonaviy raqamli yechimlar",
+    "order": "Buyurtma qilish",
+    "learn_more": "Batafsil",
+    "items": {
+      "websites": {
+        "title": "Sayt yaratish",
+        "desc": "Next.js da animatsiyalar va moslashuvchan dizayn bilan zamonaviy, tez va chiroyli saytlar."
+      },
+      "landing": {
+        "title": "Landing sahifalar",
+        "desc": "Mahsulot va xizmatlaringizni targ'ib qilish uchun yuqori konvertatsiyali landing sahifalar."
+      },
+      "corporate": {
+        "title": "Korporativ saytlar",
+        "desc": "CMS, ko'p tillilik va premium dizayn bilan ko'p sahifali korporativ portallar."
+      },
+      "telegram": {
+        "title": "Telegram Botlar",
+        "desc": "Avtomatlashtirish, mijozlarni qo'llab-quvvatlash, ariza qabul qilish va CRM integratsiyalari uchun aqlli botlar."
+      },
+      "ai_agents": {
+        "title": "AI Agentlar",
+        "desc": "Biznes jarayonlarini avtomatlashtirish uchun GPT-4 va Claude asosidagi intellektual AI agentlar."
+      },
+      "ai_automation": {
+        "title": "AI Avtomatlashtirish",
+        "desc": "AI yordamida muntazam vazifalarni avtomatlashtirish: ma'lumotlarni qayta ishlash, kontent generatsiya."
+      },
+      "admin": {
+        "title": "Admin panellar",
+        "desc": "Kontent, foydalanuvchilar va ma'lumotlarni boshqarish uchun qulay admin panellar."
+      },
+      "uiux": {
+        "title": "UI/UX Dizayn",
+        "desc": "Estetika va foydalanish qulayligini birlashtirgan o'ylangan interfeyslar."
+      }
+    }
+  },
+  "aiAgents": {
+    "title": "AI Agentlar",
+    "subtitle": "Yangi avlod intellekti",
+    "description": "Biznesingizni avtomatlashtiradigan va 24/7 ishlaydigan aqlli AI agentlar yarataman",
+    "types_title": "Agent turlari",
+    "features_title": "Imkoniyatlar",
+    "how_title": "Qanday ishlaydi",
+    "cta": "AI agent buyurtma qilish",
+    "types": {
+      "assistant": {
+        "title": "AI Yordamchilar",
+        "desc": "Savollarni javob berish, mijozlarni qo'llab-quvvatlash va 24/7 so'rovlarni qayta ishlash uchun aqlli yordamchilar."
+      },
+      "automation": {
+        "title": "Biznes avtomatlashtirish",
+        "desc": "Muntazam vazifalarni avtomatlashtiradigan agentlar: email, hujjatlar, hisobotlar."
+      },
+      "support": {
+        "title": "Qo'llab-quvvatlash agentlari",
+        "desc": "Tanaffussiz ishlaydigan to'liq AI qo'llab-quvvatlash xizmati."
+      },
+      "analytics": {
+        "title": "Analitik agentlar",
+        "desc": "Ma'lumotlarni tahlil qiladigan va real vaqtda biznes tushunchalarini beradigan AI."
+      }
+    }
+  },
+  "telegramBots": {
+    "title": "Telegram Botlar",
+    "subtitle": "Messenger orqali avtomatlashtirish",
+    "description": "Har qanday biznes ehtiyoji uchun kuchli Telegram botlar ishlab chiqaman",
+    "types_title": "Bot turlari",
+    "usecases_title": "Qo'llanish",
+    "cta": "Bot buyurtma qilish",
+    "types": {
+      "business": {
+        "title": "Biznes botlar",
+        "desc": "Telegram orqali buyurtmalar qabul qilish, mijozlarni yozib olish, xabardor qilish va biznesni boshqarish."
+      },
+      "support": {
+        "title": "Qo'llab-quvvatlash botlari",
+        "desc": "FAQ ga avtomatik javoblar, murakkab savollarni operatorlarga o'tkazish."
+      },
+      "crm": {
+        "title": "CRM Botlar",
+        "desc": "CRM tizimlari bilan integratsiya, Telegram orqali mijozlar bazasini boshqarish."
+      },
+      "payment": {
+        "title": "To'lov botlari",
+        "desc": "Telegram orqali to'lovlarni qabul qilish, obunalarni boshqarish va monetizatsiya."
+      },
+      "automation": {
+        "title": "Avtomatlashtirish botlari",
+        "desc": "Avtomatik bildirishnomalar, xabar yuborish, ma'lumotlarni tahlil qilish va boshqa muntazam vazifalar."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Narxlar",
+    "subtitle": "Shaffof narxlar",
+    "description": "Mos rejani tanlang yoki individual yechim buyurtma qiling",
+    "popular": "Mashhur",
+    "order": "Buyurtma qilish",
+    "custom_title": "Maxsus narsa kerakmi?",
+    "custom_desc": "Loyihangiz haqida gapirib bering va men eng yaxshi narxda individual yechim taklif qilaman.",
+    "custom_cta": "Loyihani muhokama qilish",
+    "month": "oy",
+    "from": "dan",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "price": "100",
+        "desc": "Kichik biznes va startaplar uchun ideal",
+        "features": [
+          "Landing sahifa",
+          "Moslashuvchan dizayn",
+          "5 tagacha bo'lim",
+          "Asosiy animatsiyalar",
+          "Murojaat formasi",
+          "SEO optimizatsiya",
+          "Muddat: 3-5 kun"
+        ]
+      },
+      "professional": {
+        "name": "Professional",
+        "price": "200",
+        "desc": "Jiddiy talablar bilan o'sib borayotgan biznes uchun",
+        "features": [
+          "Ko'p sahifali sayt",
+          "Premium dizayn",
+          "10 tagacha sahifa",
+          "Kengaytirilgan animatsiyalar",
+          "Ko'p tillilik",
+          "CMS integratsiyasi",
+          "SEO + analitika",
+          "Muddat: 7-10 kun"
+        ]
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "300",
+        "desc": "Eng yuqori sifatdagi to'liq raqamli yechim",
+        "features": [
+          "Professional dagi hamma narsa",
+          "AI integratsiyalari",
+          "Telegram bot",
+          "Admin panel",
+          "Cheksiz sahifalar",
+          "Ustuvor qo'llab-quvvatlash",
+          "30 kunlik o'zgartirishlar",
+          "Muddat: 14-21 kun"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "Aloqa",
+    "subtitle": "Men bilan bog'laning",
+    "description": "Loyihangizni muhokama qilishga va eng yaxshi yechimni taklif qilishga tayyorman",
+    "form_title": "Xabar yuborish",
+    "name": "Ism",
+    "email": "Email",
+    "project_type": "Loyiha turi",
+    "budget": "Byudjet",
+    "message": "Xabar",
+    "send": "Yuborish",
+    "sending": "Yuborilmoqda...",
+    "success": "Xabar yuborildi! Tez orada siz bilan bog'lanaman.",
+    "error": "Yuborishda xatolik. Qayta urinib ko'ring yoki to'g'ridan-to'g'ri yozing.",
+    "name_placeholder": "Ismingiz",
+    "email_placeholder": "your@email.com",
+    "message_placeholder": "Loyihangiz haqida gapirib bering...",
+    "project_types": [
+      "Sayt",
+      "Landing sahifa",
+      "Telegram bot",
+      "AI agent",
+      "Korporativ portal",
+      "Boshqa"
+    ],
+    "budgets": [
+      "$100 gacha",
+      "$100 - $200",
+      "$200 - $500",
+      "$500 - $1000",
+      "$1000+"
+    ],
+    "info_title": "Aloqa ma'lumotlari",
+    "telegram_cta": "Telegramda yozish",
+    "response_time": "24 soat ichida javob beraman"
+  },
+  "footer": {
+    "rights": "Barcha huquqlar himoyalangan",
+    "made_with": "bilan yasalgan",
+    "in": "",
+    "location": "Toshkent"
+  },
+  "common": {
+    "loading": "Yuklanmoqda...",
+    "error": "Xatolik yuz berdi",
+    "back": "Orqaga",
+    "more": "Batafsil",
+    "all": "Barchasi",
+    "or": "yoki"
+  },
+  "metadata": {
+    "home_title": "Aziz Saburov — Full-Stack Dasturchi",
+    "home_desc": "Zamonaviy saytlar, Telegram botlar va AI yechimlar yarataman. 18 yoshda, Toshkent.",
+    "about_title": "Men haqimda — Aziz Saburov",
+    "projects_title": "Loyihalar — Aziz Saburov",
+    "services_title": "Xizmatlar — Aziz Saburov",
+    "contact_title": "Aloqa — Aziz Saburov"
+  }
+}

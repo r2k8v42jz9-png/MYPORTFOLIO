@@ -1,0 +1,368 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "services": "Services",
+    "aiAgents": "AI Agents",
+    "telegramBots": "Telegram Bots",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "menu": "Menu"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Aziz Saburov",
+    "title": "Full-Stack Developer & AI Specialist",
+    "headline": "Building modern websites, Telegram bots, and AI solutions",
+    "description": "I have been studying programming for 1 year and specialize in creating premium websites, Telegram bots, and AI solutions for businesses.",
+    "cta_projects": "View Projects",
+    "cta_contact": "Contact Me",
+    "cta_order": "Order Website",
+    "scroll": "Scroll down"
+  },
+  "stats": {
+    "projects": "Projects",
+    "clients": "Clients",
+    "experience": "Year of experience",
+    "satisfaction": "Satisfaction"
+  },
+  "why": {
+    "subtitle": "Advantages",
+    "title": "Why Clients Choose Me",
+    "description": "Every project combines speed, quality, and attention to detail",
+    "items": {
+      "fast": {
+        "title": "Fast Delivery",
+        "desc": "I ship projects on time without compromising quality. Clear deadlines and a transparent process."
+      },
+      "uiux": {
+        "title": "Premium UI/UX",
+        "desc": "I craft interfaces that look expensive and work flawlessly across every device."
+      },
+      "seo": {
+        "title": "SEO Optimization",
+        "desc": "Websites that load fast and rank high in search engine results."
+      },
+      "ai": {
+        "title": "AI Integration",
+        "desc": "I implement modern AI solutions that automate your business and save time."
+      }
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Young, ambitious developer",
+    "story_title": "My Story",
+    "story": "I'm 18 years old and have been programming for 1 year. In this time, I've gone from writing my first lines of code to building full commercial projects. I specialize in modern websites, Telegram bots, and AI solutions.",
+    "story2": "My goal is not just to build websites, but powerful digital tools that help businesses grow and attract clients. Every project is an opportunity to create something truly outstanding.",
+    "skills_title": "Skills",
+    "tech_title": "Technologies",
+    "timeline_title": "My Journey",
+    "age": "18 years old",
+    "location": "Tashkent, Uzbekistan",
+    "experience_label": "Experience",
+    "experience_value": "1 year",
+    "timeline": [
+      {
+        "year": "2024",
+        "title": "The Beginning",
+        "desc": "Started learning programming. Mastered HTML, CSS, JavaScript."
+      },
+      {
+        "year": "2024",
+        "title": "React & Next.js",
+        "desc": "Dove deep into frontend development, learned React and Next.js."
+      },
+      {
+        "year": "2025",
+        "title": "First Projects",
+        "desc": "Launched first commercial projects, including Legal Masters."
+      },
+      {
+        "year": "2025",
+        "title": "AI & Telegram Bots",
+        "desc": "Mastered Telegram bot development and AI integrations."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Selected Works",
+    "description": "Projects I created with passion and professionalism",
+    "view_all": "All Projects",
+    "view_project": "View Project",
+    "visit_site": "Visit Site",
+    "technologies": "Technologies",
+    "features": "Features",
+    "coming_soon": "Coming Soon",
+    "back": "Back to Projects",
+    "live_label": "Site is live",
+    "year_label": "Year",
+    "role_label": "Role",
+    "role_value": "Design & Development",
+    "duration_label": "Duration",
+    "section_overview": "Overview",
+    "section_challenge": "The Challenge",
+    "section_solution": "The Solution",
+    "section_results": "Results",
+    "section_responsive": "Responsive Design",
+    "section_multilingual": "Multilingual System",
+    "placeholder_title": "Next Project",
+    "placeholder_desc": "Your project could be here. Contact me to collaborate.",
+    "legalmasters": {
+      "title": "Capital Legal Masters",
+      "category": "Corporate Website",
+      "year": "2025",
+      "duration": "3 weeks",
+      "description": "Premium multilingual corporate website for a modern law firm. Elegant design, full multilingual support (RU/EN/UZ), modern animations.",
+      "full_description": "Capital Legal Masters is a premium corporate website for a law firm. The project was developed with a focus on trust, professionalism, and modern design. Full multilingual support in Russian, English, and Uzbek. Optimized for SEO and performance.",
+      "overview": "Capital Legal Masters came to me to build a premium digital presence that reflects their reputation as a top-tier law firm. The goal: a corporate website that builds instant trust and turns visitors into consultation clients.",
+      "challenge": "The firm had no modern web presence, while competitors looked dated. They needed a solution that worked across three languages, established trust instantly, and loaded fast enough to rank in a competitive market.",
+      "challenge_points": [
+        "No modern web presence to build on",
+        "Had to serve clients in 3 languages",
+        "Highly competitive legal services niche",
+        "Strict speed and SEO requirements"
+      ],
+      "solution": "I designed an elegant dark-and-gold identity conveying authority and trust. The site is built on Next.js with server rendering for speed and SEO, a complete multilingual system, and smooth Framer Motion animations.",
+      "solution_points": [
+        "Premium dark-and-gold visual identity",
+        "Next.js with SSR for peak performance",
+        "Complete i18n system across three languages",
+        "Smooth animations and micro-interactions"
+      ],
+      "results": [
+        { "value": "95+", "label": "Lighthouse score" },
+        { "value": "3", "label": "Interface languages" },
+        { "value": "<1s", "label": "Load time" },
+        { "value": "100%", "label": "Responsive" }
+      ],
+      "responsive_text": "Every section adapts perfectly across mobile, tablet, and desktop. Content reflows fluidly, keeping the premium look intact on screens of any size.",
+      "multilingual_text": "Built with next-intl: visitors switch seamlessly between Russian, Uzbek, and English. Language choice is persisted, and metadata is localized for SEO in every region.",
+      "languages": ["Русский", "O'zbek", "English"],
+      "features": [
+        "Multilingual system (RU/EN/UZ)",
+        "Premium design",
+        "Framer Motion animations",
+        "SEO optimization",
+        "Responsive design",
+        "Contact form"
+      ]
+    }
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "What I Build",
+    "description": "Full spectrum of modern digital solutions for your business",
+    "order": "Order",
+    "learn_more": "Learn More",
+    "items": {
+      "websites": {
+        "title": "Website Development",
+        "desc": "Modern, fast, and beautiful websites on Next.js with animations and responsive design."
+      },
+      "landing": {
+        "title": "Landing Pages",
+        "desc": "High-converting landing pages with great CTR to promote your products and services."
+      },
+      "corporate": {
+        "title": "Corporate Websites",
+        "desc": "Multi-page corporate portals with CMS, multilingual support, and premium design."
+      },
+      "telegram": {
+        "title": "Telegram Bots",
+        "desc": "Smart bots for automation, customer support, lead capture, and CRM integrations."
+      },
+      "ai_agents": {
+        "title": "AI Agents",
+        "desc": "Intelligent AI agents powered by GPT-4 and Claude for business process automation."
+      },
+      "ai_automation": {
+        "title": "AI Automation",
+        "desc": "Automate routine tasks with AI: data processing, content generation, analytics."
+      },
+      "admin": {
+        "title": "Admin Panels",
+        "desc": "Convenient admin panels for managing content, users, and business data."
+      },
+      "uiux": {
+        "title": "UI/UX Design",
+        "desc": "Thoughtful interfaces that combine aesthetics and usability."
+      }
+    }
+  },
+  "aiAgents": {
+    "title": "AI Agents",
+    "subtitle": "Next-Generation Intelligence",
+    "description": "I build smart AI agents that automate your business and work 24/7",
+    "types_title": "Agent Types",
+    "features_title": "Capabilities",
+    "how_title": "How It Works",
+    "cta": "Order AI Agent",
+    "types": {
+      "assistant": {
+        "title": "AI Assistants",
+        "desc": "Smart assistants for answering questions, customer support, and handling requests 24/7."
+      },
+      "automation": {
+        "title": "Business Automation",
+        "desc": "Agents that automate routine tasks: email, documents, reports."
+      },
+      "support": {
+        "title": "Support Agents",
+        "desc": "Full AI-powered customer support running without breaks."
+      },
+      "analytics": {
+        "title": "Analytics Agents",
+        "desc": "AI that analyzes data and delivers business insights in real time."
+      }
+    }
+  },
+  "telegramBots": {
+    "title": "Telegram Bots",
+    "subtitle": "Automation Through Messenger",
+    "description": "I develop powerful Telegram bots for any business need",
+    "types_title": "Bot Types",
+    "usecases_title": "Use Cases",
+    "cta": "Order a Bot",
+    "types": {
+      "business": {
+        "title": "Business Bots",
+        "desc": "Receive orders, book clients, send notifications, and manage your business via Telegram."
+      },
+      "support": {
+        "title": "Support Bots",
+        "desc": "Automatic FAQ answers, escalation to human agents for complex queries."
+      },
+      "crm": {
+        "title": "CRM Bots",
+        "desc": "CRM system integration, customer base management directly in Telegram."
+      },
+      "payment": {
+        "title": "Payment Bots",
+        "desc": "Accept payments, manage subscriptions, and monetize through Telegram."
+      },
+      "automation": {
+        "title": "Automation Bots",
+        "desc": "Automatic notifications, broadcasts, data parsing, and other routine tasks."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Transparent Pricing",
+    "description": "Choose the right plan or order a custom solution",
+    "popular": "Popular",
+    "order": "Order",
+    "custom_title": "Need something special?",
+    "custom_desc": "Tell me about your project and I'll propose a custom solution at the best price.",
+    "custom_cta": "Discuss Project",
+    "month": "mo",
+    "from": "from",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "price": "100",
+        "desc": "Perfect for small businesses and startups",
+        "features": [
+          "Landing page",
+          "Responsive design",
+          "Up to 5 sections",
+          "Basic animations",
+          "Contact form",
+          "SEO optimization",
+          "Timeline: 3-5 days"
+        ]
+      },
+      "professional": {
+        "name": "Professional",
+        "price": "200",
+        "desc": "For growing businesses with serious requirements",
+        "features": [
+          "Multi-page website",
+          "Premium design",
+          "Up to 10 pages",
+          "Advanced animations",
+          "Multilingual support",
+          "CMS integration",
+          "SEO + analytics",
+          "Timeline: 7-10 days"
+        ]
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "300",
+        "desc": "Full digital solution of the highest class",
+        "features": [
+          "Everything in Professional",
+          "AI integrations",
+          "Telegram bot",
+          "Admin panel",
+          "Unlimited pages",
+          "Priority support",
+          "30-day revisions",
+          "Timeline: 14-21 days"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Get In Touch",
+    "description": "Ready to discuss your project and offer the best solution",
+    "form_title": "Send a Message",
+    "name": "Name",
+    "email": "Email",
+    "project_type": "Project Type",
+    "budget": "Budget",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Message sent! I'll get back to you shortly.",
+    "error": "Failed to send. Please try again or contact me directly.",
+    "name_placeholder": "Your name",
+    "email_placeholder": "your@email.com",
+    "message_placeholder": "Tell me about your project...",
+    "project_types": [
+      "Website",
+      "Landing Page",
+      "Telegram Bot",
+      "AI Agent",
+      "Corporate Portal",
+      "Other"
+    ],
+    "budgets": [
+      "under $100",
+      "$100 - $200",
+      "$200 - $500",
+      "$500 - $1000",
+      "$1000+"
+    ],
+    "info_title": "Contact Information",
+    "telegram_cta": "Message on Telegram",
+    "response_time": "I respond within 24 hours"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "made_with": "Made with",
+    "in": "in",
+    "location": "Tashkent"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "back": "Back",
+    "more": "Learn more",
+    "all": "All",
+    "or": "or"
+  },
+  "metadata": {
+    "home_title": "Aziz Saburov — Full-Stack Developer",
+    "home_desc": "Building modern websites, Telegram bots, and AI solutions. 18 years old, Tashkent.",
+    "about_title": "About Me — Aziz Saburov",
+    "projects_title": "Projects — Aziz Saburov",
+    "services_title": "Services — Aziz Saburov",
+    "contact_title": "Contact — Aziz Saburov"
+  }
+}
