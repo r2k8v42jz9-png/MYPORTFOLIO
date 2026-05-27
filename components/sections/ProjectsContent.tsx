@@ -72,15 +72,6 @@ export default function ProjectsContent() {
                 <div style={{ transform: "translateZ(30px)" }}>
                   <LegalMastersPreview variant="card" />
                 </div>
-                {project.live && (
-                  <div className="absolute top-3 right-3 z-10 bg-green-500/15 border border-green-500/30 text-green-400 text-[10px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1.5 backdrop-blur-sm">
-                    <span className="relative flex h-1.5 w-1.5">
-                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
-                      <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-green-400" />
-                    </span>
-                    LIVE
-                  </div>
-                )}
               </TiltCard>
 
               <div className="p-5 pt-4">

@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin", "cyrillic"],
+  display: "swap",
+});
+
+// Editorial serif used inside the LegalMasters case-study screenshot.
+const playfair = Playfair_Display({
+  variable: "--font-serif",
+  subsets: ["latin", "cyrillic"],
+  weight: ["500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -69,7 +77,11 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="ru" suppressHydrationWarning className={inter.variable}>
+    <html
+      lang="ru"
+      suppressHydrationWarning
+      className={`${inter.variable} ${playfair.variable}`}
+    >
       <body className="min-h-screen bg-background text-foreground antialiased">
         <script
           type="application/ld+json"
