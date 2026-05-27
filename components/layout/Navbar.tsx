@@ -70,32 +70,40 @@ export default function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+          "fixed top-0 left-0 right-0 z-50 border-b transition-colors duration-500",
           scrolled
-            ? "py-3 glass border-b border-border/50 shadow-lg shadow-black/5"
-            : "py-5 bg-transparent"
+            ? "glass border-border/50 shadow-lg shadow-black/5"
+            : "border-transparent bg-transparent"
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
+          <div
+            className={cn(
+              "flex items-center justify-between transition-[height] duration-500 ease-out",
+              scrolled ? "h-16" : "h-20"
+            )}
+          >
             {/* Logo */}
-            <Link href={`/${locale}`} className="flex items-center gap-2 group">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[var(--gold)] to-[var(--gold-muted)] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <Code2 className="w-4 h-4 text-black" />
-              </div>
-              <span className="font-bold text-lg tracking-tight">
-                <span className="text-gradient">AS</span>
+            <Link
+              href={`/${locale}`}
+              className="flex shrink-0 items-center gap-2.5 group"
+            >
+              <span className="flex w-9 h-9 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--gold)] to-[var(--gold-muted)] shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <Code2 className="w-[18px] h-[18px] text-black" />
+              </span>
+              <span className="font-bold text-lg leading-none tracking-tight text-gradient">
+                AS
               </span>
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-1">
+            <nav className="hidden lg:flex items-center gap-0.5">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "relative px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200",
+                    "relative inline-flex h-9 items-center rounded-lg px-3.5 text-sm font-medium transition-colors duration-200",
                     isActive(link.href)
                       ? "text-foreground"
                       : "text-muted-foreground hover:text-foreground"
@@ -114,12 +122,12 @@ export default function Navbar() {
             </nav>
 
             {/* Right controls */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1">
               {/* Language switcher */}
               <div className="relative hidden sm:block">
                 <button
                   onClick={() => setLangOpen(!langOpen)}
-                  className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-all duration-200"
+                  className="inline-flex h-9 items-center gap-1.5 rounded-lg px-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-200"
                 >
                   <Globe className="w-4 h-4" />
                   <span className="uppercase">{locale}</span>
@@ -169,7 +177,7 @@ export default function Navbar() {
               {mounted && (
                 <button
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  className="w-9 h-9 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary transition-all duration-200"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-200"
                   aria-label="Toggle theme"
                 >
                   <AnimatePresence mode="wait">
@@ -201,7 +209,7 @@ export default function Navbar() {
               {/* Mobile menu button */}
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
-                className="lg:hidden w-9 h-9 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary transition-all duration-200"
+                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-200 lg:hidden"
                 aria-label={t("menu")}
               >
                 <AnimatePresence mode="wait">
