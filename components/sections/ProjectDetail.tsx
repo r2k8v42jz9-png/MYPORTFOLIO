@@ -270,7 +270,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
               {tech.map((item) => (
                 <span
                   key={item}
-                  className="px-3.5 py-2 rounded-xl glass border border-border/50 text-sm font-medium hover:border-[var(--gold)]/30 hover:scale-105 transition-all duration-200"
+                  className="px-3.5 py-2 rounded-xl glass border border-border/50 text-sm font-medium hover:border-[var(--gold)]/30 hover:scale-105 active:scale-[0.97] transition-all duration-200"
                 >
                   {item}
                 </span>

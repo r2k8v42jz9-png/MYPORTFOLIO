@@ -103,7 +103,7 @@ export default function ServicesContent() {
           </p>
           <Link
             href={`/${locale}/contact`}
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[var(--gold)] hover:bg-[var(--gold)]/90 text-black font-bold transition-all duration-300 shadow-lg shadow-[var(--gold)]/20 hover:scale-105"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[var(--gold)] hover:bg-[var(--gold)]/90 text-black font-bold transition-all duration-300 shadow-lg shadow-[var(--gold)]/20 hover:scale-105 active:scale-[0.97]"
           >
             Get in Touch <ArrowRight className="w-4 h-4" />
           </Link>

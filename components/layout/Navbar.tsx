@@ -103,7 +103,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "relative inline-flex h-9 items-center rounded-lg px-3.5 text-sm font-medium transition-colors duration-200",
+                    "tap relative inline-flex h-9 items-center rounded-lg px-3.5 text-sm font-medium transition-colors duration-200",
                     isActive(link.href)
                       ? "text-foreground"
                       : "text-muted-foreground hover:text-foreground"
@@ -127,7 +127,7 @@ export default function Navbar() {
               <div className="relative hidden sm:block">
                 <button
                   onClick={() => setLangOpen(!langOpen)}
-                  className="inline-flex h-9 items-center gap-1.5 rounded-lg px-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-200"
+                  className="tap inline-flex h-9 items-center gap-1.5 rounded-lg px-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-200"
                 >
                   <Globe className="w-4 h-4" />
                   <span className="uppercase">{locale}</span>
@@ -177,7 +177,7 @@ export default function Navbar() {
               {mounted && (
                 <button
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-200"
+                  className="tap flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-200"
                   aria-label="Toggle theme"
                 >
                   <AnimatePresence mode="wait">
@@ -209,7 +209,7 @@ export default function Navbar() {
               {/* Mobile menu button */}
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-200 lg:hidden"
+                className="tap flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-200 lg:hidden"
                 aria-label={t("menu")}
               >
                 <AnimatePresence mode="wait">
@@ -249,21 +249,23 @@ export default function Navbar() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-40 bg-background/80 backdrop-blur-sm lg:hidden"
+              transition={{ duration: 0.35, ease: "easeOut" }}
+              className="fixed inset-0 z-40 bg-background/70 backdrop-blur-md lg:hidden"
               onClick={() => setMobileOpen(false)}
             />
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="fixed right-0 top-0 bottom-0 z-50 w-[280px] glass border-l border-border/50 lg:hidden flex flex-col"
+              transition={{ type: "spring", damping: 32, stiffness: 260, mass: 0.9 }}
+              className="fixed right-0 top-0 bottom-0 z-50 w-[280px] glass border-l border-border/50 lg:hidden flex flex-col shadow-2xl shadow-black/30"
             >
               <div className="flex items-center justify-between p-5 border-b border-border/50">
                 <span className="font-bold text-lg text-gradient">AS</span>
                 <button
                   onClick={() => setMobileOpen(false)}
-                  className="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-secondary transition-colors"
+                  className="tap w-8 h-8 rounded-lg flex items-center justify-center hover:bg-secondary transition-colors"
+                  aria-label="Close menu"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -273,15 +275,15 @@ export default function Navbar() {
                 {navLinks.map((link, i) => (
                   <motion.div
                     key={link.href}
-                    initial={{ x: 20, opacity: 0 }}
+                    initial={{ x: 24, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: i * 0.05 }}
+                    transition={{ delay: 0.08 + i * 0.045, ease: [0.22, 1, 0.36, 1] }}
                   >
                     <Link
                       href={link.href}
                       onClick={() => setMobileOpen(false)}
                       className={cn(
-                        "flex items-center px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200",
+                        "tap flex items-center px-4 py-3 rounded-xl text-sm font-medium transition-colors duration-200",
                         isActive(link.href)
                           ? "bg-secondary text-foreground"
                           : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
@@ -303,7 +305,7 @@ export default function Navbar() {
                         setMobileOpen(false);
                       }}
                       className={cn(
-                        "flex flex-col items-center gap-0.5 p-2 rounded-lg text-xs transition-all",
+                        "tap flex flex-col items-center gap-0.5 p-2 rounded-lg text-xs transition-colors",
                         loc.code === locale
                           ? "bg-secondary font-medium"
                           : "text-muted-foreground hover:bg-secondary/50"

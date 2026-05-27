@@ -222,7 +222,7 @@ export default function TelegramBotsContent() {
           </p>
           <Link
             href={`/${locale}/contact`}
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[var(--gold)] hover:bg-[var(--gold)]/90 text-black font-bold transition-all hover:scale-105 shadow-lg shadow-[var(--gold)]/20"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[var(--gold)] hover:bg-[var(--gold)]/90 text-black font-bold transition-all hover:scale-105 active:scale-[0.97] shadow-lg shadow-[var(--gold)]/20"
           >
             {t("cta")} <ArrowRight className="w-4 h-4" />
           </Link>

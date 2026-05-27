@@ -105,7 +105,7 @@ export default function PricingContent() {
                   className={cn(
                     "flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-sm transition-all duration-300",
                     isPopular
-                      ? "bg-[var(--gold)] hover:bg-[var(--gold)]/90 text-black shadow-lg shadow-[var(--gold)]/20 hover:scale-105"
+                      ? "bg-[var(--gold)] hover:bg-[var(--gold)]/90 text-black shadow-lg shadow-[var(--gold)]/20 hover:scale-105 active:scale-[0.97]"
                       : "border border-border hover:border-[var(--gold)]/40 hover:bg-[var(--gold)]/5"
                   )}
                 >

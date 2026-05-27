@@ -97,7 +97,7 @@ export default function ProjectsContent() {
                 <div className="flex gap-2">
                   <Link
                     href={`/${locale}/projects/${project.slug}`}
-                    className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl bg-secondary hover:bg-secondary/70 text-xs font-medium transition-colors"
+                    className="tap flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl bg-secondary hover:bg-secondary/70 text-xs font-medium transition-colors"
                   >
                     {t("view_project")} <ArrowRight className="w-3 h-3" />
                   </Link>
@@ -105,7 +105,7 @@ export default function ProjectsContent() {
                     href={`https://${project.domain}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl border border-[var(--gold)]/20 hover:bg-[var(--gold)]/5 text-xs text-[var(--gold)] transition-colors"
+                    className="tap flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl border border-[var(--gold)]/20 hover:bg-[var(--gold)]/5 text-xs text-[var(--gold)] transition-colors"
                   >
                     <ExternalLink className="w-3 h-3" />
                   </a>

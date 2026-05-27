@@ -188,6 +188,59 @@
   .scrollbar-none::-webkit-scrollbar {
     display: none;
   }
+
+  /* Tactile press feedback for buttons/links not wrapped in <Magnetic>. */
+  .tap {
+    transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+      background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease,
+      box-shadow 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .tap:active {
+    transform: scale(0.97);
+  }
+}
+
+/* Soft ambient gradient drift — used behind the hero for "alive" lighting. */
+@keyframes ambient-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translate3d(4%, -3%, 0) scale(1.08);
+    opacity: 1;
+  }
+}
+.ambient-drift {
+  animation: ambient-drift 14s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Subtle moving sheen across the hero wordmark (premium, very soft). */
+@keyframes text-sheen {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+.text-gradient-sheen {
+  background: linear-gradient(
+    110deg,
+    oklch(0.78 0.14 85),
+    oklch(0.92 0.08 85),
+    oklch(0.65 0.1 85),
+    oklch(0.78 0.14 85)
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: text-sheen 6s linear infinite;
 }
 
 /* Premium gradient backgrounds */

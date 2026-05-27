@@ -79,6 +79,14 @@ export default function Hero() {
     >
       {/* Background orbs — softer & smaller on mobile */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Soft drifting ambient glow (GPU transform/opacity only) */}
+        <div
+          className="ambient-drift absolute top-[-12%] left-1/2 -translate-x-1/2 w-[140%] h-[55%]"
+          style={{
+            background:
+              "radial-gradient(ellipse at center, oklch(0.78 0.14 85 / 0.06), transparent 70%)",
+          }}
+        />
         <div className="orb w-[320px] h-[320px] sm:w-[600px] sm:h-[600px] bg-[var(--gold)]/[0.07] sm:bg-[var(--gold)]/10 -top-24 -right-20 sm:-top-40 sm:-right-40" />
         <div
           className="orb w-[280px] h-[280px] sm:w-[500px] sm:h-[500px] bg-[var(--gold)]/[0.05] sm:bg-[var(--gold)]/6 bottom-0 -left-24 sm:-left-40"
@@ -131,7 +139,7 @@ export default function Hero() {
                 transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
                 className="text-[clamp(1.6rem,7.5vw,5.25rem)] font-bold tracking-[-0.03em] leading-[1.05] min-h-[1.1em] whitespace-nowrap"
               >
-                <span className="text-gradient">
+                <span className="text-gradient-sheen">
                   <TypingText locale={locale} />
                 </span>
               </motion.h1>

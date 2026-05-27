@@ -211,7 +211,7 @@ export default function AboutContent() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.04 }}
-                  className={`px-3 py-1.5 rounded-xl bg-gradient-to-br ${tech.color} border border-border/50 text-sm font-medium cursor-default hover:border-[var(--gold)]/40 transition-all duration-200 hover:scale-105`}
+                  className={`px-3 py-1.5 rounded-xl bg-gradient-to-br ${tech.color} border border-border/50 text-sm font-medium cursor-default hover:border-[var(--gold)]/40 transition-all duration-200 hover:scale-105 active:scale-[0.97]`}
                 >
                   {tech.name}
                 </motion.div>

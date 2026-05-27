@@ -98,7 +98,7 @@ export default function FeaturedProjects() {
               <div className="flex gap-3">
                 <Link
                   href={`/${locale}/projects/legalmasters`}
-                  className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-secondary hover:bg-secondary/80 text-sm font-medium transition-all duration-200"
+                  className="tap flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-secondary hover:bg-secondary/80 text-sm font-medium transition-all duration-200"
                 >
                   {t("projects.view_project")}
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -107,7 +107,7 @@ export default function FeaturedProjects() {
                   href="https://legalmasters.uz"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-[var(--gold)]/30 hover:bg-[var(--gold)]/5 text-sm font-medium text-[var(--gold)] transition-all duration-200"
+                  className="tap flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-[var(--gold)]/30 hover:bg-[var(--gold)]/5 text-sm font-medium text-[var(--gold)] transition-all duration-200"
                 >
                   <ExternalLink className="w-3.5 h-3.5" />
                   {t("projects.visit_site")}
