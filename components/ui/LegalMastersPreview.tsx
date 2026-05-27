@@ -14,9 +14,9 @@ const useIsoLayoutEffect =
   typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
 /** Fixed design width the "website" is authored at, then scaled to fit. */
-const DESIGN_W = 1000;
+const DESIGN_W = 1280;
 /** Visible crop height (design px) for the card thumbnail. */
-const CARD_CROP = 520;
+const CARD_CROP = 660;
 
 const SERIF = { fontFamily: "var(--font-serif), Georgia, serif" } as const;
 
@@ -184,33 +184,39 @@ function LegalMastersSite({ showAbout }: { showAbout: boolean }) {
       />
 
       {/* ===== Navbar ===== */}
-      <header className="relative flex items-center justify-between px-10 py-5 border-b border-black/[0.06]">
+      <header className="relative flex h-[84px] items-center justify-between px-12 border-b border-black/[0.07]">
         {/* Logo */}
-        <div className="flex items-center gap-3">
-          <div className="relative w-11 h-11 flex items-center justify-center">
-            <div
-              className="absolute inset-0 rotate-45 rounded-[3px]"
+        <div className="flex shrink-0 items-center gap-3.5">
+          <span className="relative flex w-11 h-11 items-center justify-center">
+            <span
+              className="absolute inset-0 rotate-45 rounded-[4px]"
               style={{ border: `1.5px solid ${C.red}` }}
             />
             <span
-              className="relative text-[11px] font-bold tracking-tight"
+              className="relative text-[12px] font-bold tracking-tight"
               style={{ color: C.red }}
             >
               CLM
             </span>
-          </div>
-          <div className="leading-tight">
-            <div className="text-[13px] font-semibold tracking-[0.18em] text-[#16203a]">
+          </span>
+          <span className="flex flex-col justify-center">
+            <span
+              className="text-[14px] font-semibold leading-none tracking-[0.14em]"
+              style={{ color: C.navy }}
+            >
               CAPITAL LEGAL
-            </div>
-            <div className="text-[9px] tracking-[0.4em] text-[#16203a]/60">
+            </span>
+            <span
+              className="mt-[5px] text-[8.5px] font-medium leading-none tracking-[0.5em]"
+              style={{ color: `${C.navy}70` }}
+            >
               MASTERS
-            </div>
-          </div>
+            </span>
+          </span>
         </div>
 
         {/* Nav links */}
-        <nav className="flex items-center gap-6">
+        <nav className="flex items-center gap-7">
           {[
             "ГЛАВНАЯ",
             "О КОМПАНИИ",
@@ -219,45 +225,47 @@ function LegalMastersSite({ showAbout }: { showAbout: boolean }) {
             "ПРЕИМУЩЕСТВА",
             "КОНТАКТЫ",
           ].map((item, i) => (
-            <div key={item} className="relative">
-              <span
-                className="text-[11px] font-medium tracking-[0.12em]"
-                style={{ color: i === 0 ? C.navy : "rgba(22,32,58,0.6)" }}
-              >
-                {item}
-              </span>
+            <span
+              key={item}
+              className="relative flex items-center text-[12px] font-semibold tracking-[0.1em] whitespace-nowrap"
+              style={{ color: i === 0 ? C.navy : `${C.navy}99` }}
+            >
+              {item}
               {i === 0 && (
                 <span
-                  className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full"
+                  className="absolute -bottom-[9px] left-1/2 h-[2px] w-3.5 -translate-x-1/2 rounded-full"
                   style={{ background: C.red }}
                 />
               )}
-            </div>
+            </span>
           ))}
         </nav>
 
-        {/* Right controls */}
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-md border border-black/10 flex items-center justify-center">
-            <Moon className="w-3.5 h-3.5 text-[#16203a]/50" />
-          </div>
-          <div className="flex items-center rounded-md overflow-hidden border border-black/10">
-            <span className="px-2 py-1 text-[10px] font-semibold text-[#16203a]/55">
+        {/* Right controls — unified 38px height */}
+        <div className="flex shrink-0 items-center gap-2.5">
+          <span className="flex h-[38px] w-[38px] items-center justify-center rounded-lg border border-black/10">
+            <Moon className="w-[18px] h-[18px]" style={{ color: `${C.navy}66` }} />
+          </span>
+          <span className="flex h-[38px] items-stretch overflow-hidden rounded-lg border border-black/10">
+            <span
+              className="flex items-center px-3 text-[11px] font-semibold"
+              style={{ color: `${C.navy}80` }}
+            >
               O&apos;Z
             </span>
             <span
-              className="px-2 py-1 text-[10px] font-bold text-white"
+              className="flex items-center px-3 text-[11px] font-bold text-white"
               style={{ background: C.red }}
             >
               РУ
             </span>
-          </div>
-          <div
-            className="px-4 py-2 rounded-md text-[10px] font-bold tracking-[0.12em] text-white"
-            style={{ background: C.red }}
+          </span>
+          <span
+            className="flex h-[38px] items-center rounded-lg px-5 text-[11px] font-bold tracking-[0.12em] text-white"
+            style={{ background: C.red, boxShadow: `0 10px 26px ${C.red}33` }}
           >
             КОНТАКТЫ
-          </div>
+          </span>
         </div>
       </header>
 
@@ -291,7 +299,7 @@ function LegalMastersSite({ showAbout }: { showAbout: boolean }) {
         {/* Big serif title */}
         <h1
           style={SERIF}
-          className="relative text-[78px] leading-[0.96] font-bold tracking-tight"
+          className="relative text-[96px] leading-[0.96] font-bold tracking-tight"
         >
           <span style={{ color: C.navy }}>CAPITAL </span>
           <span style={{ color: C.red }}>LEGAL</span>
@@ -301,21 +309,21 @@ function LegalMastersSite({ showAbout }: { showAbout: boolean }) {
 
         {/* diamond divider */}
         <div
-          className="my-9 w-2.5 h-2.5 rotate-45"
+          className="my-10 w-2.5 h-2.5 rotate-45"
           style={{ border: `1.5px solid ${C.red}` }}
         />
 
         {/* serif subheading */}
         <h2
           style={{ ...SERIF, color: C.navy }}
-          className="text-[26px] font-medium mb-6"
+          className="text-[30px] font-medium mb-6"
         >
           Надёжный правовой партнёр для вашего бизнеса
         </h2>
 
         {/* body */}
         <p
-          className="text-[14px] leading-relaxed max-w-[560px] mb-9"
+          className="text-[15px] leading-relaxed max-w-[620px] mb-9"
           style={{ color: C.gray }}
         >
           ООО «CAPITAL LEGAL MASTERS» — профессиональная юридическая фирма,
