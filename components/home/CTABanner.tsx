@@ -11,7 +11,7 @@ export default function CTABanner() {
   const locale = useLocale();
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-16 sm:py-24 relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         {/* Glow background */}
         <div className="absolute inset-0 bg-[var(--gold)]/5 rounded-3xl blur-3xl pointer-events-none" />

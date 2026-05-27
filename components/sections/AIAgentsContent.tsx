@@ -43,10 +43,10 @@ export default function AIAgentsContent() {
   const typeKeys = Object.keys(TYPE_ICONS) as Array<keyof typeof TYPE_ICONS>;
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-20 pb-12 sm:pt-24 sm:pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-14 sm:mb-20">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -81,7 +81,7 @@ export default function AIAgentsContent() {
         </div>
 
         {/* Agent types */}
-        <div className="mb-20">
+        <div className="mb-14 sm:mb-20">
           <h2 className="text-2xl font-bold text-center mb-10">{t("types_title")}</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {typeKeys.map((key, i) => {
@@ -109,7 +109,7 @@ export default function AIAgentsContent() {
         </div>
 
         {/* Features + How it works */}
-        <div className="grid lg:grid-cols-2 gap-16 mb-20">
+        <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 mb-14 sm:mb-20">
           {/* Features */}
           <div>
             <h2 className="text-2xl font-bold mb-8">{t("features_title")}</h2>

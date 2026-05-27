@@ -57,7 +57,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
   ];
 
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-20 pb-14 sm:pt-24 sm:pb-20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
@@ -160,7 +160,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.35, ease: EASE }}
-          className="relative mb-24 px-2 sm:px-8 py-8 rounded-3xl bg-gradient-to-b from-secondary/40 to-transparent"
+          className="relative mb-16 sm:mb-24 px-2 sm:px-8 py-8 rounded-3xl bg-gradient-to-b from-secondary/40 to-transparent"
         >
           <div className="max-w-4xl mx-auto">
             <LegalMastersPreview variant="full" />
@@ -168,7 +168,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
         </motion.div>
 
         {/* ===== Overview ===== */}
-        <section className="mb-20">
+        <section className="mb-14 sm:mb-20">
           <Reveal>
             <SectionLabel>{t("section_overview")}</SectionLabel>
           </Reveal>
@@ -180,7 +180,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
         </section>
 
         {/* ===== Challenge & Solution ===== */}
-        <section className="grid md:grid-cols-2 gap-6 mb-24">
+        <section className="grid md:grid-cols-2 gap-6 mb-16 sm:mb-24">
           <Reveal>
             <div className="glass border border-border/50 rounded-3xl p-8 h-full">
               <div className="w-12 h-12 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-5">
@@ -223,7 +223,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
         </section>
 
         {/* ===== Results ===== */}
-        <section className="mb-24">
+        <section className="mb-16 sm:mb-24">
           <div className="text-center mb-10">
             <Reveal>
               <SectionLabel>{t("section_results")}</SectionLabel>
@@ -251,7 +251,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
         </section>
 
         {/* ===== Features + Technologies ===== */}
-        <section className="grid md:grid-cols-2 gap-12 mb-24">
+        <section className="grid md:grid-cols-2 gap-12 mb-16 sm:mb-24">
           <Reveal>
             <h2 className="text-2xl font-bold mb-6 tracking-tight">{t("features")}</h2>
             <ul className="space-y-3">
@@ -280,7 +280,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
         </section>
 
         {/* ===== Responsive Design ===== */}
-        <section className="grid lg:grid-cols-2 gap-12 items-center mb-24">
+        <section className="grid lg:grid-cols-2 gap-12 items-center mb-16 sm:mb-24">
           <Reveal>
             <SectionLabel>{t("section_responsive")}</SectionLabel>
             <p className="text-muted-foreground leading-relaxed text-lg mt-4">
@@ -340,7 +340,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
         </section>
 
         {/* ===== Multilingual System ===== */}
-        <section className="mb-20">
+        <section className="mb-14 sm:mb-20">
           <div className="glass border border-border/50 rounded-3xl p-8 sm:p-12 relative overflow-hidden">
             <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-[var(--gold)]/8 blur-3xl pointer-events-none" />
             <div className="relative grid lg:grid-cols-2 gap-10 items-center">

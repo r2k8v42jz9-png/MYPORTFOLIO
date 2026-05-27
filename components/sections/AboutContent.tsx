@@ -61,10 +61,10 @@ export default function AboutContent() {
   const timeline = t.raw("timeline") as TimelineItem[];
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-20 pb-12 sm:pt-24 sm:pb-16">
       {/* Hero */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
+        <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center mb-16 sm:mb-24">
           {/* Text */}
           <div>
             <motion.p
@@ -170,7 +170,7 @@ export default function AboutContent() {
         </div>
 
         {/* Skills */}
-        <div className="grid lg:grid-cols-2 gap-16 mb-24">
+        <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 mb-16 sm:mb-24">
           <div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}

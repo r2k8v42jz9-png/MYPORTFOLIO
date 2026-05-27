@@ -97,10 +97,10 @@ export default function ContactContent() {
     "w-full px-4 py-3 rounded-xl bg-secondary border border-border/50 focus:border-[var(--gold)]/50 focus:outline-none focus:ring-2 focus:ring-[var(--gold)]/10 text-sm transition-all duration-200 placeholder:text-muted-foreground/50";
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-20 pb-12 sm:pt-24 sm:pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

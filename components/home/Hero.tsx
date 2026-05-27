@@ -75,17 +75,17 @@ export default function Hero() {
     <section
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden pt-28 pb-16"
+      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden pt-24 pb-14 sm:pt-28 sm:pb-16"
     >
-      {/* Background orbs */}
+      {/* Background orbs — softer & smaller on mobile */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="orb w-[600px] h-[600px] bg-[var(--gold)]/10 -top-40 -right-40" />
+        <div className="orb w-[320px] h-[320px] sm:w-[600px] sm:h-[600px] bg-[var(--gold)]/[0.07] sm:bg-[var(--gold)]/10 -top-24 -right-20 sm:-top-40 sm:-right-40" />
         <div
-          className="orb w-[500px] h-[500px] bg-[var(--gold)]/6 bottom-0 -left-40"
+          className="orb w-[280px] h-[280px] sm:w-[500px] sm:h-[500px] bg-[var(--gold)]/[0.05] sm:bg-[var(--gold)]/6 bottom-0 -left-24 sm:-left-40"
           style={{ animationDelay: "3s" }}
         />
         <div
-          className="orb w-[300px] h-[300px] bg-[var(--gold)]/8 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="orb hidden sm:block w-[300px] h-[300px] bg-[var(--gold)]/8 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           style={{ animationDelay: "6s" }}
         />
 
@@ -103,24 +103,24 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left - Text */}
-          <div className="space-y-7 lg:space-y-9">
+          <div className="space-y-6 sm:space-y-7 lg:space-y-9">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-[var(--gold)]/20 text-sm text-muted-foreground"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full glass border border-[var(--gold)]/20 text-xs sm:text-sm text-muted-foreground"
             >
-              <Sparkles className="w-3.5 h-3.5 text-[var(--gold)]" />
+              <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[var(--gold)] shrink-0" />
               <span>Full-Stack Developer · AI Specialist</span>
-              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-green-500 animate-pulse shrink-0" />
             </motion.div>
 
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-lg text-muted-foreground font-medium"
+                className="text-base sm:text-lg text-muted-foreground font-medium"
               >
                 {t("greeting")}
               </motion.p>
@@ -129,7 +129,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                className="text-5xl sm:text-6xl lg:text-7xl xl:text-[5.25rem] font-bold tracking-[-0.03em] leading-[1.05] min-h-[1.1em]"
+                className="text-[clamp(1.6rem,7.5vw,5.25rem)] font-bold tracking-[-0.03em] leading-[1.05] min-h-[1.1em] whitespace-nowrap"
               >
                 <span className="text-gradient">
                   <TypingText locale={locale} />
@@ -140,7 +140,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                className="text-xl sm:text-2xl lg:text-[1.75rem] font-semibold text-foreground/80 leading-[1.3] tracking-tight max-w-xl"
+                className="text-lg sm:text-2xl lg:text-[1.75rem] font-semibold text-foreground/80 leading-[1.35] sm:leading-[1.3] tracking-tight max-w-xl"
               >
                 {t("headline")}
               </motion.h2>
@@ -150,7 +150,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.45 }}
-              className="text-base text-muted-foreground leading-relaxed max-w-md"
+              className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-md"
             >
               {t("description")}
             </motion.p>
@@ -159,37 +159,39 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
-              className="flex flex-wrap gap-3 pt-1"
+              className="flex flex-col gap-2.5 pt-1 sm:flex-row sm:flex-wrap sm:gap-3"
             >
-              <Magnetic>
+              <Magnetic className="w-full sm:w-auto">
                 <Link
                   href={`/${locale}/projects`}
-                  className="group flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[var(--gold)] hover:bg-[var(--gold)]/90 text-black font-semibold text-sm transition-colors duration-300 shadow-lg shadow-[var(--gold)]/25 hover:shadow-[var(--gold)]/40"
+                  className="group flex w-full items-center justify-center gap-2 px-6 py-3 sm:px-7 sm:py-3.5 sm:w-auto rounded-xl bg-[var(--gold)] hover:bg-[var(--gold)]/90 text-black font-semibold text-sm transition-colors duration-300 shadow-lg shadow-[var(--gold)]/25 hover:shadow-[var(--gold)]/40"
                 >
                   {t("cta_projects")}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Magnetic>
-              <Magnetic>
-                <a
-                  href="https://t.me/saburovvs"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-2 px-7 py-3.5 rounded-xl border border-border hover:border-[var(--gold)]/50 bg-secondary hover:bg-[var(--gold)]/5 font-semibold text-sm transition-colors duration-300"
-                >
-                  <Send className="w-4 h-4" />
-                  {t("cta_contact")}
-                </a>
-              </Magnetic>
-              <Magnetic>
-                <Link
-                  href={`/${locale}/contact`}
-                  className="group flex items-center gap-2 px-7 py-3.5 rounded-xl border border-[var(--gold)]/30 hover:border-[var(--gold)]/60 hover:bg-[var(--gold)]/5 font-semibold text-sm transition-colors duration-300 text-[var(--gold)]"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  {t("cta_order")}
-                </Link>
-              </Magnetic>
+              <div className="flex gap-2.5 sm:contents">
+                <Magnetic className="flex-1 sm:flex-none sm:w-auto">
+                  <a
+                    href="https://t.me/saburovvs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex w-full items-center justify-center gap-2 px-6 py-3 sm:px-7 sm:py-3.5 sm:w-auto rounded-xl border border-border hover:border-[var(--gold)]/50 bg-secondary hover:bg-[var(--gold)]/5 font-semibold text-sm transition-colors duration-300"
+                  >
+                    <Send className="w-4 h-4" />
+                    {t("cta_contact")}
+                  </a>
+                </Magnetic>
+                <Magnetic className="flex-1 sm:flex-none sm:w-auto">
+                  <Link
+                    href={`/${locale}/contact`}
+                    className="group flex w-full items-center justify-center gap-2 px-6 py-3 sm:px-7 sm:py-3.5 sm:w-auto rounded-xl border border-[var(--gold)]/30 hover:border-[var(--gold)]/60 hover:bg-[var(--gold)]/5 font-semibold text-sm transition-colors duration-300 text-[var(--gold)]"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    {t("cta_order")}
+                  </Link>
+                </Magnetic>
+              </div>
             </motion.div>
           </div>
 
@@ -277,12 +279,12 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Scroll hint */}
+        {/* Scroll hint — hidden on mobile to avoid overlapping the CTAs */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-2"
         >
           <span className="text-xs text-muted-foreground">{t("scroll")}</span>
           <motion.div

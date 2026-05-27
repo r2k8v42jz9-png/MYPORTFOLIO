@@ -80,7 +80,7 @@ export default function Navbar() {
           <div
             className={cn(
               "flex items-center justify-between transition-[height] duration-500 ease-out",
-              scrolled ? "h-16" : "h-20"
+              scrolled ? "h-14 sm:h-16" : "h-16 sm:h-20"
             )}
           >
             {/* Logo */}

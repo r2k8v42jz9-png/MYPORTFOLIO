@@ -13,7 +13,7 @@ export default function FeaturedProjects() {
   const locale = useLocale();
 
   return (
-    <section className="py-24 relative">
+    <section className="py-16 sm:py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between mb-12">
           <div>

@@ -41,10 +41,10 @@ export default function TelegramBotsContent() {
   const typeKeys = Object.keys(TYPE_ICONS) as Array<keyof typeof TYPE_ICONS>;
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-20 pb-12 sm:pt-24 sm:pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-14 sm:mb-20">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -79,7 +79,7 @@ export default function TelegramBotsContent() {
         </div>
 
         {/* Bot mockup + types */}
-        <div className="grid lg:grid-cols-2 gap-16 mb-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 mb-14 sm:mb-20 items-center">
           {/* Mockup */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}

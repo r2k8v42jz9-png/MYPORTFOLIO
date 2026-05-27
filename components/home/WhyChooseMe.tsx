@@ -16,14 +16,14 @@ export default function WhyChooseMe() {
   const t = useTranslations("why");
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-16 sm:py-24 relative overflow-hidden">
       {/* Ambient background accents */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="orb w-[400px] h-[400px] bg-[var(--gold)]/5 top-0 left-1/4" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <Reveal>
             <p className="text-sm font-medium text-[var(--gold)] mb-3 tracking-[0.2em] uppercase">
               {t("subtitle")}

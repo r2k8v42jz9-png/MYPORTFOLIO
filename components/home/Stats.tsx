@@ -43,9 +43,9 @@ export default function Stats() {
   const t = useTranslations("stats");
 
   return (
-    <section className="py-20 relative">
+    <section className="py-12 sm:py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {STATS.map((stat, i) => (
             <motion.div
               key={stat.key}
@@ -53,13 +53,13 @@ export default function Stats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="glass border border-[var(--gold)]/10 rounded-2xl p-6 text-center hover:border-[var(--gold)]/30 transition-all duration-300 card-hover"
+              className="glass border border-[var(--gold)]/10 rounded-2xl p-4 sm:p-6 text-center hover:border-[var(--gold)]/30 transition-all duration-300 card-hover"
             >
-              <div className="text-3xl sm:text-4xl font-bold text-[var(--gold)] mb-2">
+              <div className="text-2xl sm:text-4xl font-bold text-[var(--gold)] mb-1 sm:mb-2">
                 <Counter to={stat.value} />
                 <span>{stat.suffix}</span>
               </div>
-              <p className="text-sm text-muted-foreground font-medium">{t(stat.key as "projects")}</p>
+              <p className="text-xs sm:text-sm text-muted-foreground font-medium">{t(stat.key as "projects")}</p>
             </motion.div>
           ))}
         </div>
