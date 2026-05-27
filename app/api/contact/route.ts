@@ -58,8 +58,10 @@ export async function POST(req: NextRequest) {
   }
 
   // --- Telegram config (server-side only — never exposed to the client) ---
-  const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-  const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+  // Trim to guard against trailing spaces/newlines pasted into env vars,
+  // which would otherwise break the API URL or chat_id in production.
+  const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN?.trim();
+  const CHAT_ID = process.env.TELEGRAM_CHAT_ID?.trim();
 
   if (!BOT_TOKEN || !CHAT_ID) {
     console.error("[contact] TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID are not set.");
