@@ -116,7 +116,7 @@
       "year": "2025",
       "duration": "3 hafta",
       "description": "Zamonaviy huquq firmasi uchun premium ko'p tilli korporativ sayt. Elegant dizayn, to'liq ko'p tillilik (RU/EN/UZ), zamonaviy animatsiyalar.",
-      "full_description": "Capital Legal Masters — huquq firmasi uchun premium korporativ sayt. Loyiha ishonch, professionallik va zamonaviy dizaynga urg'u berib ishlab chiqilgan. Rus, ingliz va o'zbek tillarida to'liq ko'p tillilik. SEO va ishlash uchun optimallashtirilgan.",
+      "full_description": "Capital Legal Masters — huquq firmasi uchun premium korporativ sayt. Loyiha ishonch, professionallik va elegant yorug' dizaynga urg'u berib ishlab chiqilgan: toza oq interfeys, to'q ko'k tipografika va nafis qizil urg'ular — xalqaro huquq firmasi uslubida. Rus, ingliz va o'zbek tillarida to'liq ko'p tillilik. SEO va ishlash uchun optimallashtirilgan.",
       "overview": "Capital Legal Masters menga yetakchi huquq firmasi sifatidagi obro'sini aks ettiruvchi premium raqamli mavjudlik yaratish uchun murojaat qildi. Maqsad — birinchi soniyadanoq ishonch uyg'otadigan va tashrif buyuruvchilarni konsultatsiya mijozlariga aylantiradigan korporativ sayt.",
       "challenge": "Firmada zamonaviy veb-sayt yo'q edi, raqobatchilar esa eskirgan ko'rinardi. Uch tilda ishlaydigan, darhol ishonch uyg'otadigan va raqobatbardosh bozorda yuqori o'rinni egallash uchun tez yuklanadigan yechim kerak edi.",
       "challenge_points": [
@@ -125,9 +125,9 @@
         "Yuqori raqobatli huquqiy xizmatlar sohasi",
         "Tezlik va SEO bo'yicha qat'iy talablar"
       ],
-      "solution": "Men obro' va ishonchni ifodalovchi elegant to'q va oltin rangli identifikatsiya ishlab chiqdim. Sayt tezlik va SEO uchun server renderingi, to'liq ko'p tillilik tizimi va silliq Framer Motion animatsiyalari bilan Next.js da qurilgan.",
+      "solution": "Men toza oq interfeys, to'q ko'k tipografika va nafis qizil urg'ular bilan elegant yorug' identifikatsiya ishlab chiqdim — zamonaviy xalqaro huquq firmasi uslubida. Sayt tezlik va SEO uchun server renderingi, to'liq ko'p tillilik tizimi va silliq Framer Motion animatsiyalari bilan Next.js da qurilgan.",
       "solution_points": [
-        "Premium to'q va oltin vizual identifikatsiya",
+        "Yorug' premium identifikatsiya: oq interfeys, ko'k tipografika, qizil urg'ular",
         "Maksimal unumdorlik uchun SSR bilan Next.js",
         "Uch tildagi to'liq i18n tizimi",
         "Silliq animatsiyalar va mikro-interaksiyalar"
@@ -341,7 +341,11 @@
     ],
     "info_title": "Aloqa ma'lumotlari",
     "telegram_cta": "Telegramda yozish",
-    "response_time": "24 soat ichida javob beraman"
+    "response_time": "24 soat ichida javob beraman",
+    "success_title": "Xabar yuborildi",
+    "success_desc": "Rahmat! Xabaringizni oldim va tez orada siz bilan bog'lanaman.",
+    "send_another": "Yana yuborish",
+    "error_title": "Yuborilmadi"
   },
   "footer": {
     "rights": "Barcha huquqlar himoyalangan",

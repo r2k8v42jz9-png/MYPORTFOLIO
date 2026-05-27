@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
-import { toast } from "sonner";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Mail,
   Phone,
@@ -12,6 +11,8 @@ import {
   Loader2,
   MessageSquare,
   Clock,
+  CheckCircle2,
+  AlertCircle,
 } from "lucide-react";
 import Magnetic from "@/components/ui/Magnetic";
 
@@ -23,47 +24,72 @@ type FormState = {
   message: string;
 };
 
+type Status = "idle" | "loading" | "success" | "error";
+
+const EMPTY_FORM: FormState = {
+  name: "",
+  email: "",
+  project_type: "",
+  budget: "",
+  message: "",
+};
+
 export default function ContactContent() {
   const t = useTranslations("contact");
 
   const projectTypes = t.raw("project_types") as string[];
   const budgets = t.raw("budgets") as string[];
 
-  const [form, setForm] = useState<FormState>({
-    name: "",
-    email: "",
-    project_type: "",
-    budget: "",
-    message: "",
-  });
-  const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState<FormState>(EMPTY_FORM);
+  const [status, setStatus] = useState<Status>("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const loading = status === "loading";
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    if (status === "error") setStatus("idle");
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.name || !form.email || !form.message) {
-      toast.error("Please fill in all required fields.");
+
+    // Client-side validation — preserves input, shows a readable message.
+    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
+      setErrorMsg(t("error"));
+      setStatus("error");
       return;
     }
-    setLoading(true);
+
+    setStatus("loading");
+    setErrorMsg("");
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
-      if (!res.ok) throw new Error();
-      toast.success(t("success"));
-      setForm({ name: "", email: "", project_type: "", budget: "", message: "" });
+
+      const data: { success?: boolean; error?: string } = await res
+        .json()
+        .catch(() => ({}));
+
+      if (!res.ok || !data.success) {
+        // Show the server's readable error; keep the user's input intact.
+        setErrorMsg(data.error || t("error"));
+        setStatus("error");
+        return;
+      }
+
+      // Success — reset the form behind the success panel.
+      setForm(EMPTY_FORM);
+      setStatus("success");
     } catch {
-      toast.error(t("error"));
-    } finally {
-      setLoading(false);
+      setErrorMsg(t("error"));
+      setStatus("error");
     }
   };
 
@@ -192,12 +218,54 @@ export default function ContactContent() {
             className="lg:col-span-3"
           >
             <div className="glass border border-border/50 rounded-3xl p-8">
-              <div className="flex items-center gap-2 mb-6">
-                <MessageSquare className="w-5 h-5 text-[var(--gold)]" />
-                <h2 className="text-lg font-bold">{t("form_title")}</h2>
-              </div>
+              <AnimatePresence mode="wait">
+                {status === "success" ? (
+                  <motion.div
+                    key="success"
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -12 }}
+                    transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                    className="flex flex-col items-center justify-center text-center py-12"
+                  >
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ type: "spring", bounce: 0.45, delay: 0.1 }}
+                      className="relative mb-6"
+                    >
+                      <div className="absolute inset-0 rounded-full bg-emerald-400/20 blur-xl" />
+                      <div className="relative flex h-20 w-20 items-center justify-center rounded-full bg-emerald-500/10 border border-emerald-500/30">
+                        <CheckCircle2 className="h-10 w-10 text-emerald-400" />
+                      </div>
+                    </motion.div>
+                    <h3 className="text-xl font-bold mb-2">{t("success_title")}</h3>
+                    <p className="text-sm text-muted-foreground max-w-sm mb-7">
+                      {t("success_desc")}
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => setStatus("idle")}
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border hover:border-[var(--gold)]/40 hover:bg-[var(--gold)]/5 text-sm font-semibold transition-colors duration-200"
+                    >
+                      <Send className="w-4 h-4" />
+                      {t("send_another")}
+                    </button>
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="form"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <div className="flex items-center gap-2 mb-6">
+                      <MessageSquare className="w-5 h-5 text-[var(--gold)]" />
+                      <h2 className="text-lg font-bold">{t("form_title")}</h2>
+                    </div>
 
-              <form onSubmit={handleSubmit} className="space-y-4">
+                    <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-medium text-muted-foreground mb-1.5">
@@ -282,11 +350,33 @@ export default function ContactContent() {
                   />
                 </div>
 
+                <AnimatePresence>
+                  {status === "error" && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.25 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="flex items-start gap-2.5 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3">
+                        <AlertCircle className="h-4 w-4 text-red-400 shrink-0 mt-0.5" />
+                        <div>
+                          <p className="text-sm font-semibold text-red-400">
+                            {t("error_title")}
+                          </p>
+                          <p className="text-xs text-red-400/80 mt-0.5">{errorMsg}</p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
                 <motion.button
                   type="submit"
                   disabled={loading}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={{ scale: loading ? 1 : 1.02 }}
+                  whileTap={{ scale: loading ? 1 : 0.98 }}
                   className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-[var(--gold)] hover:bg-[var(--gold)]/90 text-black font-bold transition-all duration-300 shadow-lg shadow-[var(--gold)]/20 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
                   {loading ? (
@@ -301,7 +391,10 @@ export default function ContactContent() {
                     </>
                   )}
                 </motion.button>
-              </form>
+                    </form>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </motion.div>
         </div>

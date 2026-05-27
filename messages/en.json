@@ -116,7 +116,7 @@
       "year": "2025",
       "duration": "3 weeks",
       "description": "Premium multilingual corporate website for a modern law firm. Elegant design, full multilingual support (RU/EN/UZ), modern animations.",
-      "full_description": "Capital Legal Masters is a premium corporate website for a law firm. The project was developed with a focus on trust, professionalism, and modern design. Full multilingual support in Russian, English, and Uzbek. Optimized for SEO and performance.",
+      "full_description": "Capital Legal Masters is a premium corporate website for a law firm. The project was developed with a focus on trust, professionalism, and an elegant light design: a clean white interface, dark navy typography, and refined red accents in the style of an international law firm. Full multilingual support in Russian, English, and Uzbek. Optimized for SEO and performance.",
       "overview": "Capital Legal Masters came to me to build a premium digital presence that reflects their reputation as a top-tier law firm. The goal: a corporate website that builds instant trust and turns visitors into consultation clients.",
       "challenge": "The firm had no modern web presence, while competitors looked dated. They needed a solution that worked across three languages, established trust instantly, and loaded fast enough to rank in a competitive market.",
       "challenge_points": [
@@ -125,9 +125,9 @@
         "Highly competitive legal services niche",
         "Strict speed and SEO requirements"
       ],
-      "solution": "I designed an elegant dark-and-gold identity conveying authority and trust. The site is built on Next.js with server rendering for speed and SEO, a complete multilingual system, and smooth Framer Motion animations.",
+      "solution": "I designed an elegant light identity with a clean white interface, dark navy typography, and refined red accents — a modern international law firm aesthetic. The site is built on Next.js with server rendering for speed and SEO, a complete multilingual system, and smooth Framer Motion animations.",
       "solution_points": [
-        "Premium dark-and-gold visual identity",
+        "Light premium identity: white interface, navy typography, red accents",
         "Next.js with SSR for peak performance",
         "Complete i18n system across three languages",
         "Smooth animations and micro-interactions"
@@ -341,7 +341,11 @@
     ],
     "info_title": "Contact Information",
     "telegram_cta": "Message on Telegram",
-    "response_time": "I respond within 24 hours"
+    "response_time": "I respond within 24 hours",
+    "success_title": "Message sent",
+    "success_desc": "Thank you! I've received your message and will get back to you shortly.",
+    "send_another": "Send another",
+    "error_title": "Couldn't send"
   },
   "footer": {
     "rights": "All rights reserved",
