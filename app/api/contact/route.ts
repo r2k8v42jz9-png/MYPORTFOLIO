@@ -128,7 +128,7 @@ export async function POST(req: NextRequest) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            from: "portfolio@azizsaburov.dev",
+            from: "portfolio@saburov.site",
             to: ["saburov.aziz@icloud.com"],
             subject: `New portfolio lead from ${name}`,
             html: `

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE = "https://azizsaburov.dev";
+const BASE = "https://saburov.site";
 const LOCALES = ["ru", "en", "uz"];
 const PAGES = ["", "/about", "/projects", "/projects/legalmasters", "/services", "/ai-agents", "/telegram-bots", "/pricing", "/contact"];
 

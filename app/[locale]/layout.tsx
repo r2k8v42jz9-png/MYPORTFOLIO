@@ -16,6 +16,8 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+const SITE_URL = "https://saburov.site";
+
 export async function generateMetadata({
   params,
 }: {
@@ -23,24 +25,58 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const titles: Record<string, string> = {
-    ru: "Азиз Сабуров — Full-Stack Разработчик",
-    en: "Aziz Saburov — Full-Stack Developer",
-    uz: "Aziz Saburov — Full-Stack Dasturchi",
+    ru: "Азиз Сабуров — Premium Web Developer & AI Solutions",
+    en: "Aziz Saburov — Premium Web Developer & AI Solutions",
+    uz: "Aziz Saburov — Premium Web Developer & AI Solutions",
   };
   const descs: Record<string, string> = {
-    ru: "Создаю современные сайты, Telegram-ботов и AI-решения. 18 лет, Ташкент.",
-    en: "Building modern websites, Telegram bots, and AI solutions. 18 years old, Tashkent.",
-    uz: "Zamonaviy saytlar, Telegram botlar va AI yechimlar yarataman. 18 yoshda, Toshkent.",
+    ru: "Премиальные современные сайты, Telegram-боты и AI-решения с элегантным мультиязычным UI/UX. Высококлассная веб-разработка от Азиза Сабурова.",
+    en: "Premium modern websites, Telegram bots, and AI solutions with elegant multilingual UI/UX. High-end web development by Aziz Saburov.",
+    uz: "Elegant ko'p tilli UI/UX bilan premium zamonaviy saytlar, Telegram botlar va AI yechimlar. Aziz Saburovdan yuqori darajadagi veb-ishlab chiqish.",
   };
+  const ogLocale: Record<string, string> = {
+    ru: "ru_RU",
+    en: "en_US",
+    uz: "uz_UZ",
+  };
+
+  const title = titles[locale] ?? titles.ru;
+  const description = descs[locale] ?? descs.ru;
+
   return {
-    title: titles[locale] ?? titles.ru,
-    description: descs[locale] ?? descs.ru,
+    title: { absolute: title },
+    description,
     alternates: {
+      canonical: `/${locale}`,
       languages: {
         ru: "/ru",
         en: "/en",
         uz: "/uz",
+        "x-default": "/ru",
       },
+    },
+    openGraph: {
+      type: "website",
+      siteName: "Aziz Saburov",
+      title,
+      description,
+      url: `${SITE_URL}/${locale}`,
+      locale: ogLocale[locale] ?? "ru_RU",
+      images: [
+        {
+          url: "/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      creator: "@saburovvs",
+      title,
+      description,
+      images: ["/opengraph-image"],
     },
   };
 }
