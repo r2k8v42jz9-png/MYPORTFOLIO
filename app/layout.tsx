@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import Clarity from "@/components/analytics/Clarity";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -137,6 +138,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
+        <Clarity />
       </body>
     </html>
   );
